@@ -1,161 +1,260 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portofolio - Andi Yanto Santoso</title>
+  <title>Andi Yanto Santoso — Executive Technical Portfolio</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-teal-500 selection:text-slate-900">
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-teal-500 selection:text-slate-900 min-h-screen relative overflow-x-hidden">
+
+  <!-- GLOW BACKGROUND EFFECTS -->
+  <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-tr from-teal-500/15 via-cyan-500/10 to-indigo-500/10 blur-[140px] pointer-events-none -z-10 rounded-full"></div>
 
   <!-- NAVIGATION BAR -->
-  <nav class="fixed top-0 left-0 w-full bg-slate-900/80 backdrop-blur-md z-50 border-b border-slate-800">
-    <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="#" class="text-xl font-bold tracking-tight text-teal-400">Andi<span class="text-white">.YS</span></a>
-      <div class="space-x-6 text-sm font-medium">
-        <a href="#tentang" class="hover:text-teal-400 transition-colors">Tentang</a>
-        <a href="#proyek" class="hover:text-teal-400 transition-colors">Proyek</a>
-        <a href="#kontak" class="hover:text-teal-400 transition-colors">Kontak</a>
+  <nav class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-6xl">
+    <div class="bg-slate-900/80 backdrop-blur-2xl border border-slate-800/80 rounded-full px-6 py-3.5 flex justify-between items-center shadow-2xl">
+      <a href="#" class="text-base font-extrabold tracking-tight text-white flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-teal-400 animate-ping"></span>
+        Andi Yanto <span class="text-teal-400">Santoso</span>
+      </a>
+      <div class="hidden sm:flex items-center gap-6 text-xs font-semibold text-slate-300">
+        <a href="#about" class="hover:text-teal-400 transition-colors">About</a>
+        <a href="#skills" class="hover:text-teal-400 transition-colors">Software & Skills</a>
+        <a href="#portfolio" class="hover:text-teal-400 transition-colors">Projects</a>
+        <a href="#experience" class="hover:text-teal-400 transition-colors">Experience</a>
+        <a href="#kontak" class="hover:text-teal-400 transition-colors">Contact</a>
       </div>
+      <a href="#kontak" class="px-4 py-2 rounded-full bg-teal-500 text-slate-950 font-bold text-xs hover:bg-teal-400 transition-all shadow-md shadow-teal-500/20">
+        Get In Touch
+      </a>
     </div>
   </nav>
 
-  <!-- HERO SECTION -->
-  <section class="min-h-screen flex items-center justify-center pt-20 px-6">
-    <div class="max-w-3xl text-center space-y-6">
-      <div class="inline-block px-3 py-1 rounded-full bg-teal-500/10 text-teal-400 text-sm font-mono mb-2 border border-teal-500/20">
-        Halo, Selamat Datang! 👋
-      </div>
-      <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight">
-        Saya <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500">Andi Yanto Santoso</span>
-      </h1>
-      <p class="text-slate-400 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed">
-        Mahasiswa yang berfokus pada analisis data, perhitungan teknis terstruktur, serta perancangan aplikasi web yang minimalis dan efisien.
-      </p>
-      <div class="pt-4 flex justify-center gap-4">
-        <a href="#proyek" class="px-6 py-3 rounded-lg bg-teal-500 text-slate-900 font-semibold hover:bg-teal-400 transition-all shadow-lg shadow-teal-500/20">
-          Lihat Portofolio
-        </a>
-        <a href="#kontak" class="px-6 py-3 rounded-lg bg-slate-800 text-slate-200 font-semibold border border-slate-700 hover:bg-slate-700 transition-all">
-          Hubungi Saya
-        </a>
-      </div>
-    </div>
-  </section>
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-6xl mx-auto px-6 pt-32 pb-20 space-y-20">
 
-  <!-- TENTANG SAYA -->
-  <section id="tentang" class="py-24 px-6 bg-slate-800/50">
-    <div class="max-w-4xl mx-auto space-y-12">
-      <div class="text-center space-y-2">
-        <h2 class="text-3xl font-bold text-white">Tentang Saya</h2>
-        <div class="w-12 h-1 bg-teal-400 mx-auto rounded-full"></div>
+    <!-- HERO / ENGLISH PROFILE SECTION -->
+    <section id="about" class="grid md:grid-cols-12 gap-8 items-center">
+      
+      <!-- PROFILE CARD (4 COLS) -->
+      <div class="md:col-span-4 bg-slate-900/90 border border-slate-800/80 rounded-3xl p-6 flex flex-col items-center text-center space-y-4 hover:border-slate-700 transition-all shadow-2xl relative group">
+        <div class="relative w-44 h-44 rounded-2xl overflow-hidden border-2 border-teal-400/40 shadow-xl shadow-teal-500/10 group-hover:scale-[1.02] transition-all">
+          <img src="profil.jpg" 
+               alt="Andi Yanto Santoso" 
+               onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80'"
+               class="w-full h-full object-cover" />
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold text-white">Andi Yanto Santoso</h2>
+          <div class="flex items-center justify-center gap-2 mt-2 px-3.5 py-1.5 bg-slate-950/90 rounded-full border border-slate-800/80">
+            <svg class="w-4 h-4 text-teal-400 fill-current" viewBox="0 0 24 24">
+              <path d="M12 2L1 7l11 5 9-4.09V17h2V7L12 2zm0 8.75L4.24 7 12 3.5 19.76 7 12 10.75zM3 10.25v7.5L12 22l9-4.25v-7.5L12 15l-9-4.75z"/>
+            </svg>
+            <span class="text-xs font-semibold text-slate-200">Bandung Institute of Technology</span>
+          </div>
+        </div>
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-teal-500/10 text-teal-400 text-xs font-medium border border-teal-500/20">
+          <span class="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span>
+          Open for Internships & Projects
+        </div>
       </div>
-      <div class="grid md:grid-cols-2 gap-8 items-center">
-        <div class="space-y-4 text-slate-300 leading-relaxed">
-          <p>
-            Saya adalah seorang mahasiswa dengan ketertarikan tinggi pada logika matematika, komputasi numerik, dan pengembangan antarmuka web yang bersih.
-          </p>
-          <p>
-            Saya menyukai tantangan pemecahan masalah (problem solving) secara terstruktur, mulai dari logika skrip algoritma hingga visualisasi data yang mudah dipahami.
+
+      <!-- DESKRIPSI UTAMA (BAHASA INGGRIS ELEGAT & PROFESIONAL) -->
+      <div class="md:col-span-8 bg-slate-900/90 border border-slate-800/80 rounded-3xl p-8 sm:p-10 flex flex-col justify-between hover:border-slate-700 transition-all space-y-6 shadow-2xl">
+        <div class="space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono text-teal-400 tracking-widest uppercase font-bold">Executive Profile</span>
+            <span class="text-xs font-mono text-slate-500">Based in Bandung, ID</span>
+          </div>
+          <h1 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
+            ITB Student Specializing in <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-cyan-300 to-indigo-400">Numerical Computing, CAD & Web Engineering</span>
+          </h1>
+          <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+            An engineering student at Bandung Institute of Technology (ITB) driven by mathematical rigor, algorithmic precision, and analytical problem-solving. Proficient in structured numerical computation with MATLAB, 2D technical drafting using AutoCAD, quantitative spreadsheet modeling, and building modern, high-performance web interfaces.
           </p>
         </div>
         
-        <!-- KEAHLIAN / SKILLS -->
-        <div class="bg-slate-900 p-6 rounded-2xl border border-slate-700/50 space-y-4">
-          <h3 class="text-lg font-semibold text-white">Teknologi & Keahlian</h3>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 bg-slate-800 text-teal-300 text-sm rounded-md border border-slate-700">MATLAB</span>
-            <span class="px-3 py-1 bg-slate-800 text-teal-300 text-sm rounded-md border border-slate-700">Metode Numerik</span>
-            <span class="px-3 py-1 bg-slate-800 text-teal-300 text-sm rounded-md border border-slate-700">Excel / Spreadsheets</span>
-            <span class="px-3 py-1 bg-slate-800 text-teal-300 text-sm rounded-md border border-slate-700">HTML & CSS</span>
-            <span class="px-3 py-1 bg-slate-800 text-teal-300 text-sm rounded-md border border-slate-700">Tailwind CSS</span>
-            <span class="px-3 py-1 bg-slate-800 text-teal-300 text-sm rounded-md border border-slate-700">Data Analysis</span>
+        <!-- BUTTON ACTIONS -->
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a href="#kontak" class="px-6 py-3 rounded-xl bg-teal-500 text-slate-950 font-bold text-sm hover:bg-teal-400 transition-all shadow-lg shadow-teal-500/20 flex items-center gap-2">
+            ✉️ Contact Me
+          </a>
+          <a href="#kontak" class="px-6 py-3 rounded-xl bg-slate-800 text-slate-200 border border-slate-700/80 text-sm font-semibold hover:bg-slate-700 transition-all flex items-center gap-2">
+            📄 Request Resume / CV
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- METRIK / STATISTIK HIGHLIGHT -->
+    <section id="impact" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="bg-slate-900/70 border border-slate-800/80 rounded-2xl p-5 text-center space-y-1">
+        <div class="text-3xl font-extrabold text-teal-400 font-mono">100%</div>
+        <div class="text-xs text-slate-400 font-medium">Simulation Accuracy</div>
+      </div>
+      <div class="bg-slate-900/70 border border-slate-800/80 rounded-2xl p-5 text-center space-y-1">
+        <div class="text-3xl font-extrabold text-teal-400 font-mono">2D CAD</div>
+        <div class="text-xs text-slate-400 font-medium">Precision AutoCAD Drafting</div>
+      </div>
+      <div class="bg-slate-900/70 border border-slate-800/80 rounded-2xl p-5 text-center space-y-1">
+        <div class="text-3xl font-extrabold text-teal-400 font-mono">ITB</div>
+        <div class="text-xs text-slate-400 font-medium">Academic Excellence</div>
+      </div>
+      <div class="bg-slate-900/70 border border-slate-800/80 rounded-2xl p-5 text-center space-y-1">
+        <div class="text-3xl font-extrabold text-teal-400 font-mono">6+</div>
+        <div class="text-xs text-slate-400 font-medium">Engineering Software Tools</div>
+      </div>
+    </section>
+
+    <!-- KEAHLIAN TEKNIS & SOFTWARE -->
+    <section id="skills" class="grid md:grid-cols-12 gap-8">
+
+      <!-- SKILLS & TOOLS (7 COLS) -->
+      <div class="md:col-span-7 bg-slate-900/80 border border-slate-800/80 rounded-3xl p-8 hover:border-slate-700 transition-all space-y-6">
+        <h3 class="text-xl font-bold text-white flex items-center gap-2">
+          <span>🛠️</span> Engineering Software & Tools
+        </h3>
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+          <div class="p-3.5 bg-slate-950/60 rounded-xl border border-slate-800/60 text-center">
+            <span class="block text-teal-400 font-bold text-sm">AutoCAD</span>
+            <span class="text-[11px] text-slate-500">2D Design & Drafting</span>
+          </div>
+          <div class="p-3.5 bg-slate-950/60 rounded-xl border border-slate-800/60 text-center">
+            <span class="block text-teal-400 font-bold text-sm">MATLAB</span>
+            <span class="text-[11px] text-slate-500">Numerical Computation</span>
+          </div>
+          <div class="p-3.5 bg-slate-950/60 rounded-xl border border-slate-800/60 text-center">
+            <span class="block text-teal-400 font-bold text-sm">Microsoft Excel</span>
+            <span class="text-[11px] text-slate-500">Advanced Analytics</span>
+          </div>
+          <div class="p-3.5 bg-slate-950/60 rounded-xl border border-slate-800/60 text-center">
+            <span class="block text-teal-400 font-bold text-sm">Microsoft Word</span>
+            <span class="text-[11px] text-slate-500">Technical Documentation</span>
+          </div>
+          <div class="p-3.5 bg-slate-950/60 rounded-xl border border-slate-800/60 text-center">
+            <span class="block text-teal-400 font-bold text-sm">MS PowerPoint</span>
+            <span class="text-[11px] text-slate-500">Engineering Presentation</span>
+          </div>
+          <div class="p-3.5 bg-slate-950/60 rounded-xl border border-slate-800/60 text-center">
+            <span class="block text-teal-400 font-bold text-sm">HTML & Tailwind</span>
+            <span class="text-[11px] text-slate-500">Web Design & Interface</span>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- PROYEK -->
-  <section id="proyek" class="py-24 px-6">
-    <div class="max-w-5xl mx-auto space-y-12">
-      <div class="text-center space-y-2">
-        <h2 class="text-3xl font-bold text-white">Proyek & Karya</h2>
-        <p class="text-slate-400">Beberapa fokus pengerjaan yang pernah saya selesaikan</p>
+      <!-- PENDIDIKAN & INSTITUSI (5 COLS) -->
+      <div class="md:col-span-5 bg-slate-900/80 border border-slate-800/80 rounded-3xl p-8 hover:border-slate-700 transition-all space-y-6">
+        <h3 class="text-xl font-bold text-white flex items-center gap-2">
+          <span>🎓</span> Education & Institution
+        </h3>
+        <div class="space-y-4">
+          <div class="flex items-start gap-3">
+            <svg class="w-8 h-8 text-teal-400 fill-current shrink-0 mt-0.5" viewBox="0 0 24 24">
+              <path d="M12 2L1 7l11 5 9-4.09V17h2V7L12 2zm0 8.75L4.24 7 12 3.5 19.76 7 12 10.75zM3 10.25v7.5L12 22l9-4.25v-7.5L12 15l-9-4.75z"/>
+            </svg>
+            <div>
+              <h4 class="font-bold text-white text-base">Bandung Institute of Technology</h4>
+              <p class="text-xs text-teal-400 font-medium">Active Undergraduate Student</p>
+            </div>
+          </div>
+          <hr class="border-slate-800" />
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Focusing on computational mathematics, numerical algorithms, technical drawing, and software-based engineering systems.
+          </p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- PORTOFOLIO / PROYEK LENGKAP -->
+    <section id="portfolio" class="space-y-6">
+      <div class="flex justify-between items-end border-b border-slate-800/80 pb-4">
+        <div>
+          <h2 class="text-2xl font-bold text-white">Featured Projects</h2>
+          <p class="text-xs text-slate-400 mt-1">CAD drawings, numerical computation, and web systems</p>
+        </div>
+        <span class="text-xs font-mono text-teal-400">Technical Works</span>
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- PROYEK 1: AUTOCAD DRAFTING -->
+        <div class="bg-slate-900/80 border border-slate-800/80 rounded-3xl p-6 hover:border-teal-500/40 transition-all flex flex-col justify-between space-y-4 group">
+          <div class="space-y-3">
+            <span class="text-[11px] font-mono text-amber-400 uppercase tracking-wider">CAD & Engineering Design</span>
+            <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition-colors">2D AutoCAD Drafting & Design</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Precision technical drawing and structured layout design using AutoCAD compliant with standard engineering norms.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="text-[10px] font-mono px-2.5 py-1 bg-slate-950 text-slate-300 rounded-lg border border-slate-800">AutoCAD</span>
+            <span class="text-[10px] font-mono px-2.5 py-1 bg-slate-950 text-slate-300 rounded-lg border border-slate-800">2D Drafting</span>
+          </div>
+        </div>
+
+        <!-- PROYEK 2: MATLAB COMPUTATION -->
+        <div class="bg-slate-900/80 border border-slate-800/80 rounded-3xl p-6 hover:border-teal-500/40 transition-all flex flex-col justify-between space-y-4 group">
+          <div class="space-y-3">
+            <span class="text-[11px] font-mono text-teal-400 uppercase tracking-wider">Algorithms & Numerics</span>
+            <h3 class="text-lg font-bold text-white group-hover:text-teal-400 transition-colors">MATLAB Computational System</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Developing structured computation algorithms for mathematical simulation and automated data plotting.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="text-[10px] font-mono px-2.5 py-1 bg-slate-950 text-slate-300 rounded-lg border border-slate-800">MATLAB</span>
+            <span class="text-[10px] font-mono px-2.5 py-1 bg-slate-950 text-slate-300 rounded-lg border border-slate-800">Algorithm</span>
+          </div>
+        </div>
+
+        <!-- PROYEK 3: EXCEL DATA MODELING -->
+        <div class="bg-slate-900/80 border border-slate-800/80 rounded-3xl p-6 hover:border-teal-500/40 transition-all flex flex-col justify-between space-y-4 group">
+          <div class="space-y-3">
+            <span class="text-[11px] font-mono text-blue-400 uppercase tracking-wider">Data & Analytics</span>
+            <h3 class="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">Excel Automated System</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Designing integrated spreadsheet analytics with high-precision formulas for error-free data validation.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="text-[10px] font-mono px-2.5 py-1 bg-slate-950 text-slate-300 rounded-lg border border-slate-800">MS Excel</span>
+            <span class="text-[10px] font-mono px-2.5 py-1 bg-slate-950 text-slate-300 rounded-lg border border-slate-800">Data Analytics</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FORM KONTAK INTERAKTIF -->
+    <!-- SECTION KONTAK DIRECT -->
+    <section id="kontak" class="bg-gradient-to-r from-slate-900 via-slate-900/90 to-slate-900 border border-slate-800/80 rounded-3xl p-8 sm:p-10 shadow-2xl space-y-6">
+      <div class="max-w-lg mx-auto text-center space-y-2">
+        <h2 class="text-3xl font-bold text-white">Get In Touch</h2>
+        <p class="text-xs text-slate-400">Choose your preferred method to connect directly with me</p>
+      </div>
+
+      <div class="max-w-xl mx-auto flex flex-col sm:flex-row gap-4 justify-center pt-2">
         
-        <!-- PROYEK 1 -->
-        <div class="bg-slate-800/60 rounded-xl overflow-hidden border border-slate-700/60 hover:border-teal-500/50 transition-all group flex flex-col justify-between">
-          <div class="p-6 space-y-4">
-            <div class="text-teal-400 text-xs font-mono">MATLAB / Numerical</div>
-            <h3 class="text-xl font-bold text-white group-hover:text-teal-400 transition-colors">Skrip Perhitungan Numerik</h3>
-            <p class="text-slate-400 text-sm leading-relaxed">
-              Pengembangan skrip MATLAB dari tahap alur logika perhitungan hingga pengolahan data otomatis untuk penyelesaian kasus matematika numerik.
-            </p>
-          </div>
-          <div class="p-6 pt-0 flex gap-2">
-            <span class="text-xs px-2.5 py-1 bg-slate-900 text-slate-300 rounded">MATLAB</span>
-            <span class="text-xs px-2.5 py-1 bg-slate-900 text-slate-300 rounded">Algorithm</span>
-          </div>
-        </div>
-
-        <!-- PROYEK 2 -->
-        <div class="bg-slate-800/60 rounded-xl overflow-hidden border border-slate-700/60 hover:border-teal-500/50 transition-all group flex flex-col justify-between">
-          <div class="p-6 space-y-4">
-            <div class="text-teal-400 text-xs font-mono">Spreadsheet / Excel</div>
-            <h3 class="text-xl font-bold text-white group-hover:text-teal-400 transition-colors">Model Simulasi Spreadsheet</h3>
-            <p class="text-slate-400 text-sm leading-relaxed">
-              Penyusunan tabel perhitungan terstruktur menggunakan formula Excel presisi untuk kalkulasi cepat dan otomatisasi input data.
-            </p>
-          </div>
-          <div class="p-6 pt-0 flex gap-2">
-            <span class="text-xs px-2.5 py-1 bg-slate-900 text-slate-300 rounded">Excel</span>
-            <span class="text-xs px-2.5 py-1 bg-slate-900 text-slate-300 rounded">Automation</span>
-          </div>
-        </div>
-
-        <!-- PROYEK 3 -->
-        <div class="bg-slate-800/60 rounded-xl overflow-hidden border border-slate-700/60 hover:border-teal-500/50 transition-all group flex flex-col justify-between">
-          <div class="p-6 space-y-4">
-            <div class="text-teal-400 text-xs font-mono">Web Design</div>
-            <h3 class="text-xl font-bold text-white group-hover:text-teal-400 transition-colors">Situs Portofolio Personal</h3>
-            <p class="text-slate-400 text-sm leading-relaxed">
-              Perancangan halaman profil interaktif dengan tema *dark mode* minimalis berbasis Tailwind CSS yang nyaman diakses dari HP maupun laptop.
-            </p>
-          </div>
-          <div class="p-6 pt-0 flex gap-2">
-            <span class="text-xs px-2.5 py-1 bg-slate-900 text-slate-300 rounded">HTML</span>
-            <span class="text-xs px-2.5 py-1 bg-slate-900 text-slate-300 rounded">Tailwind</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- KONTAK -->
-  <section id="kontak" class="py-24 px-6 bg-slate-800/30">
-    <div class="max-w-3xl mx-auto text-center space-y-8">
-      <h2 class="text-3xl font-bold text-white">Mari Terhubung</h2>
-      <p class="text-slate-400 max-w-md mx-auto">
-        Saya selalu terbuka untuk diskusi proyek, kolaborasi, atau sekadar bertukar pikiran.
-      </p>
-      <div class="flex justify-center gap-4 flex-wrap">
-        <a href="mailto:andiyantosantoso07@gmail.com" class="px-6 py-3 rounded-lg bg-teal-500 text-slate-900 font-semibold hover:bg-teal-400 transition-all shadow-lg shadow-teal-500/20">
-          📧 Kirim Email Direct
+        <!-- TOMBOL DIRECT EMAIL -->
+        <a href="mailto:andiyantosantoso07@gmail.com?subject=Project%20Inquiry%20-%20Portfolio%20Web&body=Halo%20Andi,%20saya%20tertarik%20untuk%20berdiskusi%20mengenai..." 
+           class="flex-1 py-4 px-6 rounded-2xl bg-teal-500 text-slate-950 font-bold text-sm hover:bg-teal-400 transition-all shadow-lg shadow-teal-500/20 flex items-center justify-center gap-2">
+          <span>✉️</span> Send Direct Email
         </a>
+
+        <!-- TOMBOL DIRECT WHATSAPP -->
+        <a href="https://wa.me/6282142994548?text=Halo%20Andi%20Yanto%20Santoso,%20saya%20melihat%20portofolio%20web%20kamu." 
+           target="_blank"
+           class="flex-1 py-4 px-6 rounded-2xl bg-emerald-500 text-slate-950 font-bold text-sm hover:bg-emerald-400 transition-all shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2">
+          <span>💬</span> Chat on WhatsApp
+        </a>
+
       </div>
-      <p class="text-xs text-slate-500 font-mono pt-2">andiyantosantoso07@gmail.com</p>
-    </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer class="py-8 border-t border-slate-800 text-center text-slate-500 text-sm">
-    <p>© 2026 • Andi Yanto Santoso</p>
-  </footer>
-
-</body>
-</html>
+      <div class="text-center pt-2">
+        <span class="text-xs text-slate-500 font-mono">Email: andiyantosantoso07@gmail.com | WA: +62 821-4299-4548</span>
+      </div>
+    </section>
